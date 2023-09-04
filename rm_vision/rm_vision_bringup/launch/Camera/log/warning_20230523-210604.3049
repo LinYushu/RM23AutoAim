@@ -1,0 +1,5 @@
+Log file created at: 2023/05/23 21:06:04
+Running on machine: scurm
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0523 21:06:04.520604  3101 MVCameraBase.cpp:98] Device:(name:MV-SUA133GC#0 sn:048021610074)Lost
+W0523 21:06:06.991010  3101 MVCameraBase.cpp:118] Device:(name:MV-SUA133GC#0 sn:048021610074)ReConnected, TolCount:1

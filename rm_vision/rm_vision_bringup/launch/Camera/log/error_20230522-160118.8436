@@ -1,0 +1,4 @@
+Log file created at: 2023/05/22 16:01:18
+Running on machine: scurm
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0522 16:01:18.425316  8460 MVCAMAPI.cpp:350] CameraInit Failed, err:-18,Version:2.1.0.31,FriendlyName:MV-SUA133GC#0,SN:049080710063

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="infantry_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 0 -0.00500000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.00314159265358979" />
+      <inertia
+        ixx="1.0471975511966E-07"
+        ixy="-6.44211342627335E-40"
+        ixz="3.3800825853016E-24"
+        iyy="1.0471975511966E-07"
+        iyz="4.54297570299975E-24"
+        izz="1.5707963267949E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="yaw_link">
+    <inertial>
+      <origin
+        xyz="0.00834189814872615 -0.00688166413835362 0.0610568636386575"
+        rpy="0 0 0" />
+      <mass
+        value="1.32660368469229" />
+      <inertia
+        ixx="0.00193861324145548"
+        ixy="6.76691433058715E-07"
+        ixz="-5.27268220867132E-05"
+        iyy="0.00200294577094062"
+        iyz="4.06321530516485E-05"
+        izz="0.00250502406103593" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="yaw_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="pitch_link">
+    <inertial>
+      <origin
+        xyz="0.0255696747721257 -0.00201812789164019 0.0296693737327376"
+        rpy="0 0 0" />
+      <mass
+        value="3.39218269149036" />
+      <inertia
+        ixx="0.00368889404219589"
+        ixy="-5.01807358895163E-05"
+        ixz="-5.03494072604962E-05"
+        iyy="0.00574509405649246"
+        iyz="-3.12431610382899E-05"
+        izz="0.00727346379055831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.148999999999999"
+      rpy="0 0.0286662329460563 0" />
+    <parent
+      link="yaw_link" />
+    <child
+      link="pitch_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-0.0419085929621936 3.14771737040531E-05 -0.000836396037479425"
+        rpy="0 0 0" />
+      <mass
+        value="0.0552197818714346" />
+      <inertia
+        ixx="6.40058481297208E-06"
+        ixy="2.47911712008014E-08"
+        ixz="-1.9575430282226E-06"
+        iyy="3.55963428759284E-05"
+        iyz="-7.31021152982736E-09"
+        izz="3.54030765007355E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.166040000000013 0 0.0892000000002173"
+      rpy="0 0 0" />
+    <parent
+      link="pitch_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_optical_link">
+    <inertial>
+      <origin
+        xyz="-2.05115924245547E-11 -4.21496171298941E-13 0.00499999999952727"
+        rpy="0 0 0" />
+      <mass
+        value="0.00314159265358979" />
+      <inertia
+        ixx="1.0471975511966E-07"
+        ixy="1.66296269940862E-27"
+        ixz="-2.14759857194866E-16"
+        iyy="1.0471975511966E-07"
+        iyz="-4.05441336471948E-19"
+        izz="1.5707963267949E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/camera_optical_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/camera_optical_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_optical_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.57079632679712 0 -1.57079633089651" />
+    <parent
+      link="camera_link" />
+    <child
+      link="camera_optical_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="shoot_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.000999999999887285 0.00900000000000672 -0.000501372373278269"
+        rpy="0 0 0" />
+      <mass
+        value="1.99999999999999E-05" />
+      <inertia
+        ixx="4.83333333333332E-11"
+        ixy="-2.83346946818574E-26"
+        ixz="-1.79734068645555E-26"
+        iyy="1.33333333333332E-11"
+        iyz="-6.2328631721132E-26"
+        izz="4.83333333333332E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/shoot_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/shoot_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoot_pitch_joint"
+    type="fixed">
+    <origin
+      xyz="0.14984 0 0.01785"
+      rpy="0 0 0" />
+    <parent
+      link="pitch_link" />
+    <child
+      link="shoot_pitch_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="shoot_yaw_link">
+    <inertial>
+      <origin
+        xyz="0.000985218662676257 0.00900000000000672 -0.000529828692291845"
+        rpy="0 0 0" />
+      <mass
+        value="1.99999999999999E-05" />
+      <inertia
+        ixx="4.83333333333332E-11"
+        ixy="-3.01095357983056E-26"
+        ixz="-1.8267060336524E-26"
+        iyy="1.33333333333332E-11"
+        iyz="-6.14908863893922E-26"
+        izz="4.83333333333332E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/shoot_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/shoot_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoot_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.14984 0 0.01785"
+      rpy="0 -0.028666 0" />
+    <parent
+      link="pitch_link" />
+    <child
+      link="shoot_yaw_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 0 -0.0126045068130971"
+        rpy="0 0 0" />
+      <mass
+        value="0.180770494766012" />
+      <inertia
+        ixx="9.19827587678221E-05"
+        ixy="8.4273487754553E-21"
+        ixz="-6.91478283874011E-21"
+        iyy="9.1982758767822E-05"
+        iyz="-3.22404457651239E-20"
+        izz="0.000112374384395808" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.0765 -0.1435 0.14259"
+      rpy="0 0 0" />
+    <parent
+      link="yaw_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gimbal_odom">
+    <inertial>
+      <origin
+        xyz="-3.88578058618805E-16 5.55111512312578E-17 -0.161499999999999"
+        rpy="0 0 0" />
+      <mass
+        value="0.000392699081698724" />
+      <inertia
+        ixx="3.27249234748937E-09"
+        ixy="-1.01458248356218E-40"
+        ixz="4.77925033611664E-25"
+        iyy="3.27249234748937E-09"
+        iyz="-3.67801697729567E-25"
+        izz="4.90873852123405E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/gimbal_odom.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://infantry_description/meshes/gimbal_odom.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gimbal_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.149"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gimbal_odom" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

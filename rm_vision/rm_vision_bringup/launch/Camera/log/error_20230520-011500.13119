@@ -1,0 +1,4 @@
+Log file created at: 2023/05/20 01:15:00
+Running on machine: hero
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0520 01:15:00.763546 13119 MVCAMAPI.cpp:350] CameraInit Failed, err:-18,Version:2.1.0.36,FriendlyName:MV-SUA133GC#0,SN:048021610078
